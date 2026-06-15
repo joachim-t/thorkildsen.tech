@@ -1,0 +1,5 @@
+$ORIGIN thorkildsen.tech.
+$TTL 300
+
+@ 300 IN CNAME thorkildsen-tech.joachimt.workers.dev.
+www 300 IN CNAME thorkildsen-tech.joachimt.workers.dev.
