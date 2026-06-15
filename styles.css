@@ -57,9 +57,6 @@ a {
   font-size: 0.82rem;
   line-height: 1;
   text-transform: uppercase;
-}
-
-.logo {
   display: inline-flex;
   align-items: flex-start;
   font-weight: 500;
@@ -70,30 +67,6 @@ a {
   margin-left: 0.15rem;
   font-size: 0.52rem;
   line-height: 1;
-}
-
-.hero-footer a {
-  position: relative;
-  text-decoration: none;
-}
-
-.hero-footer a::after {
-  position: absolute;
-  right: 0;
-  bottom: -0.18rem;
-  left: 0;
-  height: 1px;
-  content: "";
-  background: currentColor;
-  opacity: 0;
-  transform: scaleX(0.4);
-  transform-origin: left;
-  transition: opacity 180ms ease, transform 180ms ease;
-}
-
-.hero-footer a:hover::after {
-  opacity: 0.9;
-  transform: scaleX(1);
 }
 
 main {
@@ -108,10 +81,8 @@ main {
 }
 
 .hero-footer {
-  display: grid;
+  display: flex;
   max-width: 100%;
-  grid-template-columns: minmax(0, max-content) auto;
-  gap: 2rem;
   align-items: end;
   padding-top: 1.1rem;
   border-top: 1px solid var(--line);
@@ -119,15 +90,13 @@ main {
 
 .hero-footer a {
   color: var(--accent);
+  cursor: pointer;
   font-size: clamp(1rem, 1.4vw, 1.35rem);
   line-height: 1.2;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
   white-space: nowrap;
-}
-
-.hero-footer span {
-  color: var(--accent);
-  font-size: clamp(2.5rem, 6vw, 5.5rem);
-  line-height: 0.75;
 }
 
 @media (max-width: 820px) {
@@ -137,14 +106,6 @@ main {
 
   .hero {
     padding-top: 7rem;
-  }
-
-  .hero-footer {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-footer span {
-    justify-self: end;
   }
 
 }
